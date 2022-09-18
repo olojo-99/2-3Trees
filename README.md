@@ -1,7 +1,5 @@
 # Implementation
-First I deconstructed the assignment specifications and created a plan for the implementation of the predicates.
-The assignment document outlined that the list operations would be performed through predicates but didn’t explicitly mention the implementation of the 2-3 Trees.
-I decided that a list, being a recursive structure, would be suitable for the format of the 2-3 trees.
+I decided that a list, being a recursive structure in prolog, would be suitable for the format of the 2-3 trees.
 Using lists allowed me to expand variables into list and sublist, as well as isolate the heads and tails of trees and subtrees.
 I figured that storing the parent nodes of the tree as the head and the children in the tail of the list would be most effective for storing 2-3 trees in the list.
 
@@ -48,7 +46,7 @@ In order to see if a rule was operating as intended, I would draw out the expect
 While testing my predicates, I expressed each 2-3 tree as a list and expected results to follow suit.
 I tested add, member and height to produce both results and expected inputs for certain results to examine the validity of each predicate.
 
-Examples
+## Examples
 ?- add(8, [ [10,20], [2,nil,nil],nil,[25,nil,nil] ], [ [10,20],[[2,8],nil,nil, nil],nil,[25,nil,nil] ]).
 % True
 
@@ -75,36 +73,3 @@ Examples
 ?- height([ [10,20],[1,nil,nil],[[15,18],nil,[17,nil,nil],nil],[[25,30],nil,nil,[[32,40],nil,nil,nil]] ], 2).
 % False
 
-?- prettyPrint([ [10, 20], [5,nil,nil], [[15,18],nil,[16,nil,nil],nil], [30,nil,nil] ]).
-     --
-     30
-     --
---
-20
-     --
-     18
-          --
-          16
-          --
-     15
-     --
-10
---
-     --
-     5
-     --
-
-?- prettyPrint([ [10,20], [5,nil,nil], [15,nil,nil], [25,nil,nil] ]). 
-     --
-     25
-     --
---
-20
-     --
-     15
-     --
-10
---
-     --
-     5
-     --
