@@ -39,8 +39,7 @@ I wrote a simple rule for printing a single node to include its depth in the tre
 When writing the recursive rules for 2 nodes and 3 nodes, I increased the number of tabs printed through the Depth variable and recursively printed the Left, Right and, if necessary, Middle children.
 -	Newlines were also used to create spaces between different nodes and subtrees throughout the design of the rules.
 
-For the design of the prettyPrint() predicate, I referred to the “Operation on Data Structure” section from Prolog Programming in Artificial Intelligence for printing 2-3 trees. [1]
-Testing
+## Testing
 I used a series of trees of various complexities to test the rigour of my predicates.
 In order to see if a rule was operating as intended, I would draw out the expected result beforehand and compare it to the results of my predicates.
 While testing my predicates, I expressed each 2-3 tree as a list and expected results to follow suit.
