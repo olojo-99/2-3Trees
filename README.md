@@ -39,12 +39,6 @@ I wrote a simple rule for printing a single node to include its depth in the tre
 When writing the recursive rules for 2 nodes and 3 nodes, I increased the number of tabs printed through the Depth variable and recursively printed the Left, Right and, if necessary, Middle children.
 -	Newlines were also used to create spaces between different nodes and subtrees throughout the design of the rules.
 
-## Testing
-I used a series of trees of various complexities to test the rigour of my predicates.
-In order to see if a rule was operating as intended, I would draw out the expected result beforehand and compare it to the results of my predicates.
-While testing my predicates, I expressed each 2-3 tree as a list and expected results to follow suit.
-I tested add, member and height to produce both results and expected inputs for certain results to examine the validity of each predicate.
-
 ## Examples
 ?- add(8, [ [10,20], [2,nil,nil],nil,[25,nil,nil] ], [ [10,20],[[2,8],nil,nil, nil],nil,[25,nil,nil] ]).
 % True
